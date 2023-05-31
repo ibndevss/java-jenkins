@@ -1,0 +1,865 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rekap" pageWidth="1190" pageHeight="841" columnWidth="1150" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="109d2703-a593-490c-a94c-31acdd039685">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="LOCAL_ORACLE"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w1" value="322"/>
+	<property name="com.jaspersoft.studio.data.sql.SQLQueryDesigner.sash.w2" value="667"/>
+	<property name="com.jaspersoft.studio.unit." value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="cm"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="cm"/>
+	<queryString>
+		<![CDATA[SELECT
+        a.seq_no docno,
+        TO_CHAR (a.docdate,
+        'DD MON YYYY') docdate,
+        case 
+            when approve='N' then null 
+            else a.slsno||'-'||h.slsname 
+        end as salesman,
+        a.custname,
+        a.custadd1 || a.custadd2 custadd,
+        a.shipadd1 || a.shipadd2 || a.shipadd3 shipadd,
+        a.ccontact,
+        a.cphone1,
+        no_ktp,
+        a.h11 AS hh11,
+        b.ket ket11,
+        a.h12 AS hh12,
+        c.ket ket12,
+        a.h13 AS hh13,
+        d.ket ket13,
+        a.h14 AS hh14,
+        e.ket ket14,
+        case 
+            when approve='N' then '' 
+            else nokartu1 
+        end as nokartu1,
+        a.nobarcode1,
+        a.taxname,
+        a.taxadd1 || a.taxadd2 taxadd,
+        case 
+            when approve='N' then null 
+            else typeout||'-'||typename 
+        end as channel,
+        case 
+            when approve='N' then null 
+            else grupname 
+        end as grupname,
+        case 
+            when approve='N' then null 
+            else cterm 
+        end as cterm,
+        case 
+            when approve='N' then null 
+            else climit 
+        end as climit,
+        case 
+            when approve='N' then '' 
+            else case 
+                when flagpay='K' then 'Kredit' 
+                when flagpay='T' then 'Tunai' 
+                when flagpay='G' then 'Giro' 
+            end 
+        end as paytype,
+        case 
+            when approve='N' then '' 
+            else case 
+                when hsenin='Y' then 'Senin' 
+                when hselasa='Y' then 'Selasa' 
+                when hrabu='Y' then 'Rabu'     
+                when hkamis='Y' then 'Kamis' 
+                when hjumat='Y' then 'Jumat' 
+                when hsabtu='Y' then 'Sabtu' 
+                else 'Minggu' 
+            end 
+        end as kunj,
+        case 
+            when approve='N' then '' 
+            else case 
+                when visit1||visit2||visit3||visit4='YYYY' then 'Weekly'     
+                when visit1||visit2||visit3||visit4='YTYT' then 'Be Weekly1'     
+                when visit1||visit2||visit3||visit4='TYTY' then 'Be Weekly2'    
+                when visit1||visit2||visit3||visit4='YTTT' then 'Monthly 1'    
+                when visit1||visit2||visit3||visit4='TYTT' then 'Monthly 2'    
+                when visit1||visit2||visit3||visit4='TTYT' then 'Monthly 3'    
+                when visit1||visit2||visit3||visit4='TTTY' then 'Monthly 4' 
+            end 
+        end as pola,
+        case 
+            when approve='Y' then 'DITERIMA' 
+            when approve='N' then 'DITOLAK' 
+        end as decision,
+        'REKAP PENGAJUAN NEW OPEN OUTLET' as HEADER,
+        TO_CHAR (SYSDATE,
+        'DD MON YYYY HH24:MI') AS tglcetak,
+        ( SELECT
+            TO_CHAR(MEMODATE,
+            'DD MON YYYY') datememo 
+        FROM
+            USERMYR0.FMEMO 
+        WHERE
+            MEMONAMA = 'CADATE') AS tglgudang,
+        ( SELECT
+            TO_CHAR(XNO) 
+        FROM
+            USERMYR0.ftable13 
+        WHERE
+            xkey = 'ARWANA_UPDATE') AS RELEASE,
+        (select
+            memostring 
+        from
+            USERMYR0.fmemo 
+        where
+            memonama='KODEDIST') AS KODEDIST,
+        (select
+            memostring 
+        from
+            USERMYR0.fmemo 
+        where
+            memonama='COMPANYNAME') AS COMPANYNAME,
+        (select
+            MEMOSTRING 
+        from
+            USERMYR0.fmemo 
+        where
+            memonama ='KOTA') KOTA,
+        '30002354' AS XDOC,
+        '05 DEC 2022' AS XDOCDATE,
+        '1546464' AS REQKEY               
+    FROM
+        USERMYR0.ftable142_h f 
+    INNER JOIN
+        USERMYR0.ftable142_d g    
+            ON f.docno = g.docno    
+    INNER JOIN
+        USERMYR0.ftable141 a 
+            ON g.docno_noo = a.seq_no    
+    LEFT JOIN
+        USERMYR0.fcshir11 b 
+            ON a.h11 = b.t11    
+    LEFT JOIN
+        USERMYR0.fcshir12 c 
+            ON a.h11 = c.t11 
+            AND a.h12 = c.t12    
+    LEFT JOIN
+        USERMYR0.fcshir13 d 
+            ON a.h11 = d.t11 
+            AND a.h12 = d.t12 
+            AND a.h13 = d.t13    
+    LEFT JOIN
+        USERMYR0.fcshir14 e    
+            ON a.h11 = e.t11                 
+            AND a.h12 = e.t12                 
+            AND a.h13 = e.t13                 
+            AND a.h14 = e.t14    
+    LEFT JOIN
+        USERMYR0.fsls h 
+            ON a.slsno = h.slsno    
+    left join
+        USERMYR0.ftypeout t 
+            on t.type = a.typeout    
+    left join
+        USERMYR0.fgrupout o 
+            on o.GRUPOUT = a.grupout             
+    WHERE
+        f.docno = '30002354'          
+    ORDER BY
+        a.docno ]]>
+	</queryString>
+	<field name="DOCNO" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DOCNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="DOCNO"/>
+	</field>
+	<field name="DOCDATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DOCDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="DOCDATE"/>
+	</field>
+	<field name="SALESMAN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SALESMAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="SALESMAN"/>
+	</field>
+	<field name="CUSTNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CUSTNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUSTNAME"/>
+	</field>
+	<field name="CUSTADD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CUSTADD"/>
+		<property name="com.jaspersoft.studio.field.label" value="CUSTADD"/>
+	</field>
+	<field name="SHIPADD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SHIPADD"/>
+		<property name="com.jaspersoft.studio.field.label" value="SHIPADD"/>
+	</field>
+	<field name="CCONTACT" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CCONTACT"/>
+		<property name="com.jaspersoft.studio.field.label" value="CCONTACT"/>
+	</field>
+	<field name="CPHONE1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CPHONE1"/>
+		<property name="com.jaspersoft.studio.field.label" value="CPHONE1"/>
+	</field>
+	<field name="NO_KTP" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NO_KTP"/>
+		<property name="com.jaspersoft.studio.field.label" value="NO_KTP"/>
+	</field>
+	<field name="HH11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HH11"/>
+		<property name="com.jaspersoft.studio.field.label" value="HH11"/>
+	</field>
+	<field name="KET11" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KET11"/>
+		<property name="com.jaspersoft.studio.field.label" value="KET11"/>
+	</field>
+	<field name="HH12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HH12"/>
+		<property name="com.jaspersoft.studio.field.label" value="HH12"/>
+	</field>
+	<field name="KET12" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KET12"/>
+		<property name="com.jaspersoft.studio.field.label" value="KET12"/>
+	</field>
+	<field name="HH13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HH13"/>
+		<property name="com.jaspersoft.studio.field.label" value="HH13"/>
+	</field>
+	<field name="KET13" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KET13"/>
+		<property name="com.jaspersoft.studio.field.label" value="KET13"/>
+	</field>
+	<field name="HH14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HH14"/>
+		<property name="com.jaspersoft.studio.field.label" value="HH14"/>
+	</field>
+	<field name="KET14" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KET14"/>
+		<property name="com.jaspersoft.studio.field.label" value="KET14"/>
+	</field>
+	<field name="NOKARTU1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOKARTU1"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOKARTU1"/>
+	</field>
+	<field name="NOBARCODE1" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NOBARCODE1"/>
+		<property name="com.jaspersoft.studio.field.label" value="NOBARCODE1"/>
+	</field>
+	<field name="TAXNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TAXNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="TAXNAME"/>
+	</field>
+	<field name="TAXADD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TAXADD"/>
+		<property name="com.jaspersoft.studio.field.label" value="TAXADD"/>
+	</field>
+	<field name="CHANNEL" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="CHANNEL"/>
+		<property name="com.jaspersoft.studio.field.label" value="CHANNEL"/>
+	</field>
+	<field name="GRUPNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="GRUPNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="GRUPNAME"/>
+	</field>
+	<field name="CTERM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CTERM"/>
+		<property name="com.jaspersoft.studio.field.label" value="CTERM"/>
+	</field>
+	<field name="CLIMIT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="CLIMIT"/>
+		<property name="com.jaspersoft.studio.field.label" value="CLIMIT"/>
+	</field>
+	<field name="PAYTYPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PAYTYPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PAYTYPE"/>
+	</field>
+	<field name="KUNJ" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KUNJ"/>
+		<property name="com.jaspersoft.studio.field.label" value="KUNJ"/>
+	</field>
+	<field name="POLA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="POLA"/>
+		<property name="com.jaspersoft.studio.field.label" value="POLA"/>
+	</field>
+	<field name="DECISION" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DECISION"/>
+		<property name="com.jaspersoft.studio.field.label" value="DECISION"/>
+	</field>
+	<field name="HEADER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HEADER"/>
+		<property name="com.jaspersoft.studio.field.label" value="HEADER"/>
+	</field>
+	<field name="TGLCETAK" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLCETAK"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLCETAK"/>
+	</field>
+	<field name="TGLGUDANG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLGUDANG"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLGUDANG"/>
+	</field>
+	<field name="RELEASE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RELEASE"/>
+		<property name="com.jaspersoft.studio.field.label" value="RELEASE"/>
+	</field>
+	<field name="KODEDIST" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KODEDIST"/>
+		<property name="com.jaspersoft.studio.field.label" value="KODEDIST"/>
+	</field>
+	<field name="COMPANYNAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="COMPANYNAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="COMPANYNAME"/>
+	</field>
+	<field name="KOTA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="KOTA"/>
+		<property name="com.jaspersoft.studio.field.label" value="KOTA"/>
+	</field>
+	<field name="XDOC" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="XDOC"/>
+		<property name="com.jaspersoft.studio.field.label" value="XDOC"/>
+	</field>
+	<field name="XDOCDATE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="XDOCDATE"/>
+		<property name="com.jaspersoft.studio.field.label" value="XDOCDATE"/>
+	</field>
+	<field name="REQKEY" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="REQKEY"/>
+		<property name="com.jaspersoft.studio.field.label" value="REQKEY"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="507" y="34" width="3" height="11" uuid="e61ed4c1-648a-48e6-9ae3-38b5c3f40ddf"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="126" y="34" width="70" height="11" uuid="1bb8bea7-be9b-471b-9553-9243091ddc41"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal Cetak]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="315" y="34" width="70" height="11" uuid="543b7215-5dde-49a1-ba6c-8574c6e8c573"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="34" width="40" height="11" uuid="17413dbc-8833-45d1-b875-b621bdeb22b8"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Release]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="510" y="34" width="67" height="11" uuid="46a8755b-8de4-465b-ba0f-4ad7dd0033c6"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RELEASE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="199" y="34" width="97" height="11" uuid="4045e4c5-eeeb-4c36-83b6-7a27c0613c23"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLCETAK}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="388" y="34" width="70" height="11" uuid="9bd6a382-e770-43ec-8250-1bbcffbdc8e8"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLGUDANG}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="385" y="34" width="3" height="11" uuid="9da53bf1-f0db-43dc-aa1e-8ad203d3ffa5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="196" y="34" width="3" height="11" uuid="c251ec11-50ed-444e-ac02-6988395f7950"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="34" width="43" height="11" uuid="16083adb-15e3-4dda-96fc-2774251f1873">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Halaman  :]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="43" y="34" width="20" height="11" uuid="b5215af9-453c-473d-bcd3-f3544d0e0983">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="63" y="34" width="19" height="11" uuid="eaf269a6-9c90-487e-9473-4cf03856d069">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[dari]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="82" y="34" width="21" height="11" uuid="45251282-6f86-4861-b80f-d71201b9a9af"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="848" height="14" uuid="f043e03e-cd4c-47da-9d40-33be0a1bc070"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Trebuchet MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HEADER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="18" width="848" height="14" uuid="04bd8fc0-b59e-4f12-8c44-6a00b1d872da"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Trebuchet MS" size="9" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KODEDIST} + " - " + $F{COMPANYNAME} + " - " +$F{KOTA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="52" y="47" width="3" height="11" uuid="6fa16cb8-3d89-48fc-9ae5-a7ca2069aa04"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="52" height="11" uuid="12f958eb-87e9-4c54-8b7c-19652810a96d"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[No Dokumen]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="55" y="47" width="70" height="11" uuid="60d0dd7e-acd7-4100-80e6-2f12e2c47ab6"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{XDOC}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="52" y="58" width="3" height="11" uuid="ceecbdb9-a7cb-433e-990d-3c0814f4804e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="55" y="58" width="70" height="11" uuid="fa23bd44-a336-4541-84d0-fe171263dde1"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{XDOCDATE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="58" width="52" height="11" uuid="01b0e883-d820-49dc-b0e4-f036e8ff1519"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="523" y="47" width="3" height="11" uuid="c3b1a508-9451-4ccc-a971-ba20a1de2e61"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="47" width="56" height="11" uuid="bb58b1f4-e830-4fcb-a4a9-8547d2389e93"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Request Key]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="526" y="47" width="70" height="11" uuid="7aaa3a0c-e980-4b1e-a2e4-18a393f8ff66"/>
+				<box leftPadding="4"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{REQKEY}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="523" y="58" width="3" height="11" uuid="5f16b5fb-abae-4eb3-b4cf-e11718dcb1ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="467" y="58" width="56" height="11" uuid="176f894d-c59c-4ed3-9ab8-5b880372663e"/>
+				<box leftPadding="1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Authentication]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="526" y="58" width="124" height="11" uuid="9361b0a6-39c9-4b62-9d92-483547a98b50"/>
+				<box>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="17">
+			<staticText>
+				<reportElement x="0" y="0" width="82" height="14" uuid="6678bdc2-2398-4611-aceb-17daa680ba40"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[No Register]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="82" y="0" width="73" height="14" uuid="056a62aa-86cb-4472-9315-e0f33d3528a4"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Outlet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="155" y="0" width="133" height="14" uuid="cf1bdfa6-6092-452b-b057-0447673e3f46"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="288" y="0" width="136" height="14" uuid="e0fd5420-81aa-4164-b581-25b7db4cc6a1"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat Kirim]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="424" y="0" width="68" height="14" uuid="b37980b2-470f-494f-9cca-4947d7e79f40"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telepon]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="492" y="0" width="42" height="14" uuid="ab0bac67-edb5-482f-a701-705238caca5f"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="534" y="0" width="76" height="14" uuid="c39ecdfd-0c9c-440f-ad7c-83a55783c518"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Barcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="610" y="0" width="93" height="14" uuid="9f08a17a-7864-4254-9e5f-e2c758b9ff2f"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Channel]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="703" y="0" width="85" height="14" uuid="0cfa736d-d0d9-42e4-8c3f-7be9f022a77b"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Group Outlet]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="788" y="0" width="25" height="14" uuid="84e22dd1-65cb-4821-bb92-4a5c0c1fcfd0"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="813" y="0" width="34" height="14" uuid="016cb5af-8438-4e08-9847-308fcc4b685a"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="847" y="0" width="53" height="14" uuid="bb42ebd3-1469-4e2a-8db8-1792dbc560aa"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[L. Kredit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="900" y="0" width="101" height="14" uuid="e0df1572-59fe-4113-abd0-98da276c5368"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salesman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1001" y="0" width="34" height="14" uuid="8942a842-6417-4a37-9898-56deb547c543"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Hari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1035" y="0" width="62" height="14" uuid="1ced0c78-2eb5-48ce-ba8a-3e9c72485366"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pola Kunjungan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1097" y="0" width="53" height="14" uuid="1951ca4e-b14e-4f98-8041-e84d47c2d33d"/>
+				<box leftPadding="1">
+					<topPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keputusan]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="13" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="82" height="11" uuid="9247d71b-f682-4c3e-990f-65280d6b1446"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DOCNO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="82" y="0" width="73" height="11" uuid="2e699f5f-b4d3-4fab-9006-39a803c49419"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTNAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="155" y="0" width="133" height="11" uuid="c1081696-227e-44c8-899e-f10b53bfc423"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTADD}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="288" y="0" width="136" height="11" uuid="1ecc9a9a-8220-4ec7-9d22-ced3dfa94d5a"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTADD}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="424" y="0" width="68" height="11" uuid="614f6ea3-11b4-4842-992e-c677224d9d9f"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CPHONE1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="492" y="0" width="42" height="11" uuid="f4d7f012-cc9f-4fa0-a2a9-0aca5caa46c2"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CCONTACT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="534" y="0" width="76" height="11" uuid="462143db-3a46-416a-81c1-e861b027f4c1"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NOKARTU1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="610" y="0" width="93" height="11" uuid="39253dc5-fe03-4e55-be73-f9d1dd33cc0b"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CHANNEL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="703" y="0" width="85" height="11" uuid="e726f5a6-7ccb-43f2-bcc5-6e3def971047"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{GRUPNAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="788" y="0" width="25" height="11" uuid="d5c85ec1-658f-4df1-a3c4-d4bdcb5ff996"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CTERM}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="813" y="0" width="34" height="11" uuid="535c0b20-b332-4f07-8f14-c19a6a557e69"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PAYTYPE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="847" y="0" width="53" height="11" uuid="65f832da-67e7-4c96-9832-ade649c75a62"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CLIMIT}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="900" y="0" width="101" height="11" uuid="0de4b5a5-2637-4e27-ba32-a5aee9508f89"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALESMAN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1001" y="0" width="34" height="11" uuid="b3931804-a3bc-4a3c-ab05-0d412dda5be9"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{KUNJ}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1035" y="0" width="62" height="11" uuid="8562e657-05f8-442c-9e94-681b4b569700"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{POLA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="1097" y="0" width="53" height="11" uuid="dbbd60ad-72a5-49ff-99b7-543b0ead0210"/>
+				<box leftPadding="1"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DECISION}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

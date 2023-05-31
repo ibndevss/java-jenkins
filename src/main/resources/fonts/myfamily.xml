@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fontFamilies>
+
+<fontFamily name="Courier New">
+<normal><![CDATA[fonts/cour.ttf]]></normal>
+<bold><![CDATA[fonts/courbd.ttf]]></bold>
+<italic><![CDATA[fonts/couri.ttf]]></italic>
+<boldItalic><![CDATA[fonts/courbi.ttf]]></boldItalic>
+<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+</fontFamily>
+
+<fontFamily name="Trebuchet MS">
+<normal><![CDATA[fonts/trebuc.ttf]]></normal>
+<bold><![CDATA[fonts/trebucbd.ttf]]></bold>
+<italic><![CDATA[fonts/trebucit.ttf]]></italic>
+<boldItalic><![CDATA[fonts/trebucbi.ttf]]></boldItalic>
+<pdfEmbedded><![CDATA[true]]></pdfEmbedded>
+</fontFamily>
+
+</fontFamilies>

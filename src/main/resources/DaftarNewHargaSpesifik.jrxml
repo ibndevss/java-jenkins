@@ -1,0 +1,781 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Daftar New Harga Spesifik" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="736" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="e457d5e2-e383-4194-8bb7-9622a47a4c5c">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Oracle Mayora 1"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<field name="HEADER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HEADER"/>
+		<property name="com.jaspersoft.studio.field.label" value="HEADER"/>
+	</field>
+	<field name="TGLSISTEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLSISTEM"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLSISTEM"/>
+	</field>
+	<field name="TGLGUDANG" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLGUDANG"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLGUDANG"/>
+	</field>
+	<field name="RELEASE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RELEASE"/>
+		<property name="com.jaspersoft.studio.field.label" value="RELEASE"/>
+	</field>
+	<field name="TGLBERLAKU" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLBERLAKU"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLBERLAKU"/>
+	</field>
+	<field name="UMBRELLA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="UMBRELLA"/>
+		<property name="com.jaspersoft.studio.field.label" value="UMBRELLA"/>
+	</field>
+	<field name="BRAND" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BRAND"/>
+		<property name="com.jaspersoft.studio.field.label" value="BRAND"/>
+	</field>
+	<field name="SUBBRAND" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SUBBRAND"/>
+		<property name="com.jaspersoft.studio.field.label" value="SUBBRAND"/>
+	</field>
+	<field name="PRODUK" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PRODUK"/>
+		<property name="com.jaspersoft.studio.field.label" value="PRODUK"/>
+	</field>
+	<field name="PCODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PCODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PCODE"/>
+	</field>
+	<field name="PCODENAME" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PCODENAME"/>
+		<property name="com.jaspersoft.studio.field.label" value="PCODENAME"/>
+	</field>
+	<field name="TIPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TIPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="TIPE"/>
+	</field>
+	<field name="NMTIPE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NMTIPE"/>
+		<property name="com.jaspersoft.studio.field.label" value="NMTIPE"/>
+	</field>
+	<field name="DATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="DATA"/>
+		<property name="com.jaspersoft.studio.field.label" value="DATA"/>
+	</field>
+	<field name="NAMA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="NAMA"/>
+		<property name="com.jaspersoft.studio.field.label" value="NAMA"/>
+	</field>
+	<field name="TGLMULAI" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLMULAI"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLMULAI"/>
+	</field>
+	<field name="TGLAKHIR" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLAKHIR"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLAKHIR"/>
+	</field>
+	<field name="TOLERANSI" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TOLERANSI"/>
+		<property name="com.jaspersoft.studio.field.label" value="TOLERANSI"/>
+	</field>
+	<field name="HRGKCL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="HRGKCL"/>
+		<property name="com.jaspersoft.studio.field.label" value="HRGKCL"/>
+	</field>
+	<field name="HRGTGH" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="HRGTGH"/>
+		<property name="com.jaspersoft.studio.field.label" value="HRGTGH"/>
+	</field>
+	<field name="HRGBSR" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="HRGBSR"/>
+		<property name="com.jaspersoft.studio.field.label" value="HRGBSR"/>
+	</field>
+	<group name="Group1" keepTogether="true">
+		<groupFooter>
+			<band height="1">
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="92" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="17" width="70" height="11" uuid="6ca780eb-36f7-48f4-86fe-705f7ab2258c">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="70" y="17" width="10" height="11" uuid="e0025343-337b-4006-a0de-870ea7529940">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="17" width="70" height="11" uuid="f3c0f1dc-82a9-434f-9657-a9d7f6c67960"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLSISTEM}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="391" y="17" width="10" height="11" uuid="b735c6cc-dd43-4dc7-967b-bb2b2c64f62e">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="341" y="17" width="50" height="11" uuid="c0452d6d-5c8b-47cd-bb35-2bbf310ea286">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Release]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="401" y="17" width="50" height="11" uuid="c0f544e9-0279-458b-8d40-884d9b68cbd7"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RELEASE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="460" height="15" uuid="08ee54f2-c6ed-48e5-a086-b83d024b526f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Trebuchet MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HEADER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="168" y="17" width="70" height="11" uuid="43abb19e-43ef-4ad4-a1ee-aacbfe1c1405">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Gudang]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="248" y="17" width="70" height="11" uuid="2e276748-0aec-43f8-bcab-ed0042bce627"/>
+				<textElement>
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLGUDANG}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="238" y="17" width="10" height="11" uuid="f995150f-88fb-44a9-8b68-394335f11d01">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField evaluationTime="Report">
+				<reportElement x="120" y="34" width="19" height="11" uuid="faf7d95a-4744-4e46-9022-d919e7ba0378"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="34" width="14" height="11" uuid="2373a5f5-c18c-4605-8494-cbc9a4e8202d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="34" width="80" height="11" uuid="a545c4a1-a136-46af-bdce-fa0e198554b6">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Halaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="104" y="34" width="10" height="11" uuid="ef1d6a15-2bd4-4d6f-8b9e-4b9d68ad3902">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="34" width="10" height="11" uuid="1ad80fe6-0aab-48a0-9a66-bee7ac7ccb19">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="47" width="80" height="11" uuid="02f077fb-6fe2-4ae6-be30-2f2cb9c72548">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Tanggal Berlaku]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="80" y="47" width="10" height="11" uuid="e63a7c2c-c77b-4e4c-93ff-a37abc937f66">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="47" width="150" height="11" uuid="113c41fa-7254-4608-a812-907d1647a0c7">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLBERLAKU}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="60" width="80" height="11" uuid="4890b927-4251-40c9-9a5a-0823c3b6854b">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Umbrella]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="60" width="150" height="11" uuid="6d04a903-2b74-454a-a1bc-745d474673df">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{UMBRELLA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="60" width="10" height="11" uuid="7b3bf432-4daa-4c43-823c-ac803393da0b">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="73" width="80" height="11" uuid="d2161d26-2e35-4b81-b44d-065390aff35c">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Brand]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="73" width="150" height="11" uuid="26025003-7438-4556-98e4-318531921312">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BRAND}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="73" width="10" height="11" uuid="9d180793-40bc-4b93-8d74-d174882897ad">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="335" y="60" width="150" height="11" uuid="95de8e39-885c-4a4e-a2c7-1deaefa7f323"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SUBBRAND}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="245" y="60" width="80" height="11" uuid="725b56c6-0705-4455-a846-6e5be9fdb104">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Sub Brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="60" width="10" height="11" uuid="308db2b6-9846-47d4-9a7b-ee60bd0e8920">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="335" y="73" width="150" height="11" uuid="3f74b304-ad41-4b88-9372-0c16772ddd8f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PRODUK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="245" y="73" width="80" height="11" uuid="434a61fc-655b-44ce-b94b-979b2717dfb5">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[Pcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="73" width="10" height="11" uuid="0a789d86-3684-4b89-a3e4-8f77ed51d9d4">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="25" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<staticText>
+				<reportElement x="0" y="0" width="36" height="20" printWhenGroupChanges="Group1" uuid="105738d9-ef1b-48ef-8208-efb29c83a7b7">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pcode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="36" y="0" width="175" height="20" printWhenGroupChanges="Group1" uuid="d28545b4-602f-4452-afd5-ad6eba7c5d5a">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Produk]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="211" y="0" width="28" height="20" printWhenGroupChanges="Group1" uuid="90dcc317-33a9-4e1f-b1ef-6ec126bc5a82">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="239" y="0" width="53" height="20" printWhenGroupChanges="Group1" uuid="9395ef31-96fd-49dd-90c5-e8956ae5ccee">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama Tipe]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="292" y="0" width="39" height="20" printWhenGroupChanges="Group1" uuid="56577b06-8947-4995-b761-282dd4cb8cf2">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="331" y="0" width="85" height="20" printWhenGroupChanges="Group1" uuid="850673be-4319-4940-87df-cf1f81700b10">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="416" y="0" width="56" height="20" printWhenGroupChanges="Group1" uuid="6ae4e6e3-65de-4c3a-842c-3230de385a66">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berlaku Dari]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="472" y="0" width="56" height="20" printWhenGroupChanges="Group1" uuid="f2319dbf-4faa-4552-8f4b-5ff8845f4412">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Berlaku s/d]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="0" width="39" height="20" printWhenGroupChanges="Group1" uuid="9dc74a3f-076f-4be3-a377-82dbd61ba731">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Toleransi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="567" y="0" width="56" height="20" printWhenGroupChanges="Group1" uuid="5559152f-1a51-4698-8479-d44957580667">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Kecil]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="623" y="0" width="56" height="20" printWhenGroupChanges="Group1" uuid="1835d49e-f916-442c-af0d-4074a0ab6174">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Tengah]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="679" y="0" width="56" height="20" printWhenGroupChanges="Group1" uuid="d081340f-70a9-4fb4-ab5d-cd4d45570a14">
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="7" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Harga Besar]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<textField isBlankWhenNull="true">
+				<reportElement x="0" y="0" width="36" height="11" printWhenGroupChanges="Group1" uuid="da215aef-b19f-4610-ac45-2516406de436">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PCODE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="36" y="0" width="175" height="11" printWhenGroupChanges="Group1" uuid="8072157e-5195-40c0-9e31-ea759cfd6d68">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PCODENAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="211" y="0" width="28" height="11" printWhenGroupChanges="Group1" uuid="8831119f-6190-4907-b38f-632546a91380">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TIPE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="239" y="0" width="53" height="11" printWhenGroupChanges="Group1" uuid="c07de3a1-5c1e-47f0-bca0-4352b35b0e8e">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NMTIPE}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="292" y="0" width="39" height="11" printWhenGroupChanges="Group1" uuid="7c3a67b8-6b77-411b-8e2b-76bb7ba3d1eb">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DATA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="331" y="0" width="85" height="11" printWhenGroupChanges="Group1" uuid="0cc91f3a-6c7d-42af-8deb-3715985d4d1e">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NAMA}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="416" y="0" width="56" height="11" printWhenGroupChanges="Group1" uuid="2a31e8e9-2e1f-45bf-bb2c-1eaf5348ff61">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLMULAI}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="472" y="0" width="56" height="11" printWhenGroupChanges="Group1" uuid="bec479dc-0af9-4d29-aebb-b6370aa3b885">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLAKHIR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="528" y="0" width="39" height="11" printWhenGroupChanges="Group1" uuid="13cf16b7-6324-430e-a1c0-db5a78845f86">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TOLERANSI}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;#,##0.###-" isBlankWhenNull="true">
+				<reportElement x="567" y="0" width="56" height="11" printWhenGroupChanges="Group1" uuid="7284c975-fc7d-4652-a586-6cf041f8edef">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HRGKCL}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;#,##0.###-" isBlankWhenNull="true">
+				<reportElement x="623" y="0" width="56" height="11" printWhenGroupChanges="Group1" uuid="6bc48259-c25c-4654-958b-215db6358e9c">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HRGTGH}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;#,##0.###-" isBlankWhenNull="true">
+				<reportElement x="679" y="0" width="56" height="11" printWhenGroupChanges="Group1" uuid="b5c078ce-26ff-4cbb-847f-3cc8f4bf10b5">
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HRGBSR}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="1" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<line>
+				<reportElement x="0" y="0" width="735" height="1" uuid="cb7445e4-f513-47eb-863e-205381ee5a11">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="px"/>
+				</reportElement>
+				<graphicElement>
+					<pen lineWidth="0.5" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+		</band>
+	</summary>
+</jasperReport>

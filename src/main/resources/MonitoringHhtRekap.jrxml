@@ -1,0 +1,1544 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MonitoringUtilisasiHhtRekap" pageWidth="792" pageHeight="612" columnWidth="736" leftMargin="28" rightMargin="28" topMargin="28" bottomMargin="28" uuid="4c7df3ba-90c6-4ad8-b359-77e7aedc6d91">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DBMYR"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<field name="HEADER" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="HEADER"/>
+		<property name="com.jaspersoft.studio.field.label" value="HEADER"/>
+	</field>
+	<field name="TGLCETAK" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLCETAK"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLCETAK"/>
+	</field>
+	<field name="TGLGD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="TGLGD"/>
+		<property name="com.jaspersoft.studio.field.label" value="TGLGD"/>
+	</field>
+	<field name="RLS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="RLS"/>
+		<property name="com.jaspersoft.studio.field.label" value="RLS"/>
+	</field>
+	<field name="PERIODE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PERIODE"/>
+		<property name="com.jaspersoft.studio.field.label" value="PERIODE"/>
+	</field>
+	<field name="PEKAN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PEKAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="PEKAN"/>
+	</field>
+	<field name="PLHDATA" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="PLHDATA"/>
+		<property name="com.jaspersoft.studio.field.label" value="PLHDATA"/>
+	</field>
+	<field name="SLS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SLS"/>
+		<property name="com.jaspersoft.studio.field.label" value="SLS"/>
+	</field>
+	<field name="ALTIS" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ALTIS"/>
+		<property name="com.jaspersoft.studio.field.label" value="ALTIS"/>
+	</field>
+	<field name="SALESMAN" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SALESMAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="SALESMAN"/>
+	</field>
+	<field name="SLSFORCE" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="SLSFORCE"/>
+		<property name="com.jaspersoft.studio.field.label" value="SLSFORCE"/>
+	</field>
+	<field name="WEEKNO" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="WEEKNO"/>
+		<property name="com.jaspersoft.studio.field.label" value="WEEKNO"/>
+	</field>
+	<field name="TARGETCALL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TARGETCALL"/>
+		<property name="com.jaspersoft.studio.field.label" value="TARGETCALL"/>
+	</field>
+	<field name="SCAN" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="SCAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="SCAN"/>
+	</field>
+	<field name="PERSENSCAN" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PERSENSCAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="PERSENSCAN"/>
+	</field>
+	<field name="NONSCAN" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="NONSCAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="NONSCAN"/>
+	</field>
+	<field name="PERSENNONSCAN" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="PERSENNONSCAN"/>
+		<property name="com.jaspersoft.studio.field.label" value="PERSENNONSCAN"/>
+	</field>
+	<field name="BTGSATU" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGSATU"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGSATU"/>
+	</field>
+	<field name="BTGDUA" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGDUA"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGDUA"/>
+	</field>
+	<field name="BTGTIGA" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGTIGA"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGTIGA"/>
+	</field>
+	<field name="BTGEMPAT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGEMPAT"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGEMPAT"/>
+	</field>
+	<field name="BTGLIMA" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGLIMA"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGLIMA"/>
+	</field>
+	<field name="BTGENAM" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGENAM"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGENAM"/>
+	</field>
+	<field name="BTGTUJUH" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="BTGTUJUH"/>
+		<property name="com.jaspersoft.studio.field.label" value="BTGTUJUH"/>
+	</field>
+	<field name="TTTT" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TTTT"/>
+		<property name="com.jaspersoft.studio.field.label" value="TTTT"/>
+	</field>
+	<field name="NONCALL" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="NONCALL"/>
+		<property name="com.jaspersoft.studio.field.label" value="NONCALL"/>
+	</field>
+	<variable name="SUMTGTCALL" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{TARGETCALL}]]></variableExpression>
+	</variable>
+	<variable name="SUMSCAN" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{SCAN}]]></variableExpression>
+	</variable>
+	<variable name="SUMNONSCAN" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{NONSCAN}]]></variableExpression>
+	</variable>
+	<variable name="SUMB1" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGSATU}]]></variableExpression>
+	</variable>
+	<variable name="SUMB2" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGDUA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB3" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGTIGA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB4" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGEMPAT}]]></variableExpression>
+	</variable>
+	<variable name="SUMB5" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGLIMA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB6" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGENAM}]]></variableExpression>
+	</variable>
+	<variable name="SUMB7" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGTUJUH}]]></variableExpression>
+	</variable>
+	<variable name="SUMT" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{TTTT}]]></variableExpression>
+	</variable>
+	<variable name="SUMNONCALL" class="java.math.BigDecimal" resetType="Group" resetGroup="GroupHeader" calculation="Sum">
+		<variableExpression><![CDATA[$F{NONCALL}]]></variableExpression>
+	</variable>
+	<variable name="SUMTGTCALL_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TARGETCALL}]]></variableExpression>
+	</variable>
+	<variable name="SUMSCAN_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{SCAN}]]></variableExpression>
+	</variable>
+	<variable name="SUMNONSCAN_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NONSCAN}]]></variableExpression>
+	</variable>
+	<variable name="SUMB1_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGSATU}]]></variableExpression>
+	</variable>
+	<variable name="SUMB2_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGDUA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB3_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGTIGA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB4_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGEMPAT}]]></variableExpression>
+	</variable>
+	<variable name="SUMB5_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGLIMA}]]></variableExpression>
+	</variable>
+	<variable name="SUMB6_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGENAM}]]></variableExpression>
+	</variable>
+	<variable name="SUMB7_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{BTGTUJUH}]]></variableExpression>
+	</variable>
+	<variable name="SUMT_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TTTT}]]></variableExpression>
+	</variable>
+	<variable name="SUMNONCALL_1" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NONCALL}]]></variableExpression>
+	</variable>
+	<group name="GroupHeader">
+		<groupExpression><![CDATA[$F{SALESMAN}]]></groupExpression>
+		<groupHeader>
+			<band/>
+		</groupHeader>
+		<groupFooter>
+			<band height="14">
+				<staticText>
+					<reportElement x="2" y="3" width="189" height="11" uuid="11f24a7a-e782-4a24-89a3-e45848576b2a">
+						<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+						<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SUB TOTAL]]></text>
+				</staticText>
+				<textField isBlankWhenNull="true">
+					<reportElement x="191" y="3" width="34" height="11" uuid="36d318f1-768a-43bb-ad99-35d8d7ce1f2b"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMTGTCALL}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="225" y="3" width="34" height="11" uuid="9d7b5f3b-feb9-4bb5-92f5-b2c15925f061"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMSCAN}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="293" y="3" width="31" height="11" uuid="fecc7a8d-5c61-4c3a-bcae-d72d61bb945d"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMNONSCAN}]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="259" y="3" width="28" height="11" uuid="a087eef9-7274-48d4-9da8-bd374094644c"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{SUMSCAN}.doubleValue() / $V{SUMTGTCALL}.doubleValue())*100]]></textFieldExpression>
+				</textField>
+				<textField pattern="#,##0.00" isBlankWhenNull="true">
+					<reportElement x="324" y="3" width="28" height="11" uuid="fd52d647-344e-48c6-af08-1599132e2aae"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[($V{SUMNONSCAN}.doubleValue() / $V{SUMTGTCALL}.doubleValue())*100]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="358" y="3" width="34" height="11" uuid="64ce2225-2e3b-4179-9d77-ee198bb8e1ea"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB1}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="392" y="3" width="34" height="11" uuid="fdcba091-09ad-4a45-826a-0189bcbe29a7"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB2}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="426" y="3" width="34" height="11" uuid="55be039a-025b-4525-ac8c-a5b3ac94bf6e"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB3}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="460" y="3" width="34" height="11" uuid="2dd6d3d3-5991-48bc-bcdf-074f00ada77c"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB4}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="494" y="3" width="34" height="11" uuid="5d6d4d29-115c-4d9f-8720-4e32b7de5792"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB5}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="528" y="3" width="34" height="11" uuid="3f5ea09f-e69b-4424-9ce2-b4d0477cc288"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB6}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="562" y="3" width="34" height="11" uuid="e19118a9-e97d-40c1-9c0a-25153511e685"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMB7}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="596" y="3" width="36" height="11" uuid="fe6ecc9d-4394-4086-8d17-4822389dc835"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMT}]]></textFieldExpression>
+				</textField>
+				<textField isBlankWhenNull="true">
+					<reportElement x="632" y="3" width="48" height="11" uuid="7eae64f6-71fb-484e-8a0e-87ed175853a7"/>
+					<box>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$V{SUMNONCALL}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="287" y="3" width="6" height="11" uuid="33f5e752-3d64-49f3-9104-c8d0d246d079">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[%]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="352" y="3" width="6" height="11" uuid="33a40376-d96b-4666-bccf-1f780b0d5e0f">
+						<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					</reportElement>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Trebuchet MS" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[%]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<pageHeader>
+		<band height="86" splitType="Stretch">
+			<textField>
+				<reportElement x="2" y="0" width="547" height="14" uuid="8517e7de-64c2-461b-b39d-b32fe15b2b1d"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{HEADER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="320" y="20" width="96" height="11" uuid="a460b339-bc8b-4c3a-b788-0143143ea7ef"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLGD}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="241" y="20" width="68" height="11" uuid="5d125a95-37cc-4fa5-9896-1e057eb1fe9a">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal Gudang]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="42" width="60" height="11" uuid="e4a48b15-8669-4a3a-b0ef-fb0b79690a07">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Week]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="42" width="176" height="11" uuid="f118d25d-127b-4d83-aa4f-b6f4dbff6286"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PEKAN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="456" y="20" width="83" height="11" uuid="b86d0022-9fe5-43b7-9199-9915317b78bd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{RLS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="416" y="20" width="40" height="11" uuid="625b637c-5400-42b4-9888-46c139b22998">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Release :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="53" width="60" height="11" uuid="116b360a-eaf4-491f-aa5f-4f707f8c929c">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Pilihan Data]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="53" width="11" height="11" uuid="f2f70fa9-66df-40ae-a94f-3bd770935cad">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="53" width="176" height="11" uuid="9c1fe63a-6cc4-4239-ba0b-b33f37d2dc89"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PLHDATA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="64" width="60" height="11" uuid="d1882b9b-1c57-4c7f-80a2-d4d6d6f25301">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Salesman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="64" width="11" height="11" uuid="b40ea10e-4e24-440c-abe6-ee7230b4fa43">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="64" width="476" height="22" uuid="49a78cac-c24e-4070-9d76-00f2ff34a581"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SLS}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="62" y="20" width="11" height="11" uuid="c801cc11-2772-4b8a-a26c-124eebd24e82">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="20" width="60" height="11" uuid="ad1d6db7-5078-4125-9fef-b9e1aff14456">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Halaman]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="86" y="20" width="10" height="11" uuid="e8971578-c4ca-4ff7-9480-79e1119ac563">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.x" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.y" value="cm"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<text><![CDATA[of]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="20" width="13" height="11" uuid="01b87de8-38a9-4f33-acef-b52ec79a429c"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" isBlankWhenNull="true">
+				<reportElement x="96" y="20" width="13" height="11" uuid="8e82e51e-d4be-4290-bca2-c4029103b2b4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="73" y="31" width="176" height="11" uuid="86964954-2cdd-4b4f-85a1-b3b77b428e68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERIODE}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="31" width="60" height="11" uuid="3d3b0f6b-d364-4bf5-9453-c592eec2260b">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Periode]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="31" width="11" height="11" uuid="71e723d5-4af1-48e5-9b13-f73847399cf6">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="62" y="42" width="11" height="11" uuid="b74c8349-e1ad-4d5d-8103-bd65f76c36f9">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="309" y="20" width="11" height="11" uuid="cad4ba83-9789-42cb-a776-43bc014c490b">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="150" y="20" width="70" height="11" uuid="775ec36d-18ee-4aae-92ef-dd4aa76da480"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TGLCETAK}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="113" y="20" width="27" height="11" uuid="94fff245-5488-4cd2-a66a-1a9a14740ec8">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[/ Print]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="140" y="20" width="10" height="11" uuid="68f1847b-8fde-456a-8862-9f076bb37440">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[:]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement x="358" y="4" width="238" height="11" uuid="d733e074-3b6d-4b34-908f-bea6c645bbf4"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ALASAN TIDAK SCAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="4" width="121" height="22" uuid="675db89e-7ce9-4733-be0a-75d88af63a28">
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALESMAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="123" y="4" width="34" height="22" uuid="c3d1729b-211d-4c82-9b03-7e15993aa52f"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SALES
+FORCE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="293" y="4" width="31" height="22" uuid="fe32e19b-7280-44af-9fb1-80945b93610c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NON SCAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="4" width="34" height="22" uuid="2f0e87b6-93e8-4780-b187-8023526ccfb6"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[WEEK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="191" y="4" width="34" height="22" uuid="d75045ed-96fb-44f9-9fdf-c7491dc7767b"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TARGET CALL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="225" y="4" width="34" height="22" uuid="dbbfbc6d-409d-4a9c-bb1e-fb4436c96a63"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SCAN]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="259" y="4" width="34" height="22" uuid="10d554fc-803b-4d34-8ee2-1de60a179736"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="324" y="4" width="34" height="22" uuid="3f648e3f-a980-47c6-8751-b520dc89931c"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="358" y="15" width="34" height="11" uuid="5807c5e8-be04-4c84-aa30-38e719a8ee44"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="392" y="15" width="34" height="11" uuid="406a07e5-565d-452b-9780-b58888557a18"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="426" y="15" width="34" height="11" uuid="55ed56a8-cf0d-4fac-ad07-33a66d742bc8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="15" width="34" height="11" uuid="f63e760d-9968-42da-9187-d9f3df9617fe"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="494" y="15" width="34" height="11" uuid="2f4646ba-d456-438f-8d00-4dd6d6f3a0fd"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="528" y="15" width="34" height="11" uuid="2dcd8a16-1016-4f61-8d2f-99ceba12b8b3"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="562" y="15" width="34" height="11" uuid="fa7c3d96-8b54-464b-84bf-87661b5b5234"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[B7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="596" y="4" width="36" height="22" uuid="23e1534b-8d1c-4dcd-b37b-c5e6a1f1c8b8"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MANUAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="632" y="4" width="48" height="22" uuid="9bf84920-c0cb-478d-8975-4ebbf67e3298"/>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NON CALL]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="19" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="2" y="0" width="121" height="19" isPrintInFirstWholeBand="true" uuid="5669de0e-0f91-4667-b00c-c86661becf0c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SALESMAN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement isPrintRepeatedValues="false" x="123" y="0" width="34" height="19" isPrintInFirstWholeBand="true" printWhenGroupChanges="GroupHeader" uuid="d58bcd8c-cfec-4db1-aaf3-c6be93b7fdd4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SLSFORCE}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="358" y="0" width="34" height="19" uuid="4820b633-c31b-4575-a24d-9b1099d98d2c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGSATU}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="157" y="0" width="34" height="19" uuid="fbe5d446-65cb-441e-b035-dc6c64f9fee4"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{WEEKNO}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="191" y="0" width="34" height="19" uuid="1c14e3c4-3261-433c-8334-cc01220815fb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TARGETCALL}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" x="225" y="0" width="34" height="19" uuid="b1cbffae-b938-4420-b27d-de2c0f8f5123"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{SCAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="" x="259" y="0" width="28" height="19" uuid="9d5c8c95-89e0-4357-8c30-43ffa35de352"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSENSCAN}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement key="" x="293" y="0" width="31" height="19" uuid="476e47c8-3b00-418d-b208-4fba89a2890d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NONSCAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement key="" x="324" y="0" width="28" height="19" uuid="ca4bf526-571a-4b5b-a34d-df60cc99b946"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{PERSENNONSCAN}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="392" y="0" width="34" height="19" uuid="27b69bdf-adac-44d6-8bf1-27e4d57c4b7c"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGDUA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="426" y="0" width="34" height="19" uuid="f49f32e7-ba98-474d-8c32-6eb9514169eb"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGTIGA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="460" y="0" width="34" height="19" uuid="39f7aca3-7a44-4934-a525-d4cdc89468da"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGEMPAT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="494" y="0" width="34" height="19" uuid="204082a9-b8f1-4702-af2d-dba129e0f990"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGLIMA}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="528" y="0" width="34" height="19" uuid="1b334471-8bf7-42d6-9577-ef47131b5e89"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGENAM}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="562" y="0" width="34" height="19" uuid="eadda0f4-62b1-4875-a735-541b6f744b9d"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{BTGTUJUH}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="596" y="0" width="36" height="19" uuid="0cd5d379-5834-4126-b8f4-9672001ea7a9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TTTT}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###;-#,##0.###" isBlankWhenNull="true">
+				<reportElement x="632" y="0" width="48" height="19" uuid="b0dc5124-989d-42ac-b0c2-0eb9afaaec86"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NONCALL}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="287" y="0" width="6" height="19" uuid="ae5badb1-6981-4b08-a8a1-74208223a3d5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="0" width="6" height="19" uuid="e7576393-c109-4885-b721-7a9ed36f84fa">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="40">
+			<staticText>
+				<reportElement x="2" y="29" width="678" height="11" uuid="94145429-e3e0-4224-96ea-e177f7c4caa8">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[T : Transaksi Non HHT(Entry Manual Di RealOrder); NonCall : Outlet KPL yang tidk dikunjungi; TargetCall : KPL + OA
+
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="2" y="3" width="148" height="11" uuid="d4220915-f54c-4ea4-b21a-47e9265f0d69">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alasan Tidak Scan (ALTIS) =     ]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="154" y="3" width="526" height="25" uuid="941b2ed7-8b1d-4500-a2f7-bf7993c35be5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Top">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ALTIS}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="14">
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="259" y="3" width="28" height="11" uuid="2c043eb1-de92-42dc-a25a-a92f3dca590e"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{SUMSCAN_1}.doubleValue() /$V{SUMTGTCALL_1}.doubleValue() )*100]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="528" y="3" width="34" height="11" uuid="d8040701-e2bf-48d5-b1eb-0a94149e99fd"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB6_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="632" y="3" width="48" height="11" uuid="66e3553f-0c84-4081-8cf9-f09c7f6a32e2"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMNONCALL_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="596" y="3" width="36" height="11" uuid="bea47942-1527-4fea-8abd-e3a52b4662ab"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMT_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="460" y="3" width="34" height="11" uuid="0f4f94ee-c80d-467f-9d73-96b238b66da3"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB4_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="562" y="3" width="34" height="11" uuid="a739db77-2b2b-4ff3-9380-d177146c3bec"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB7_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="191" y="3" width="34" height="11" uuid="d087dd65-e5ea-460d-b8d5-a0d6d53cb027"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMTGTCALL_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="2" y="3" width="189" height="11" uuid="d4c0156e-95c0-44bb-b40d-89af13e354bb">
+					<property name="com.jaspersoft.studio.unit.width" value="cm"/>
+					<property name="com.jaspersoft.studio.unit.height" value="cm"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TOTAL ALL]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="392" y="3" width="34" height="11" uuid="6a0ed48e-13de-4bac-8d5b-be7c5c70f3ce"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB2_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="358" y="3" width="34" height="11" uuid="2e8f4ec0-26cd-4883-a022-f9187e6c2a8f"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB1_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="225" y="3" width="34" height="11" uuid="013394cd-051d-4ffb-b28e-efbc0d20d5dc"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMSCAN_1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.00" isBlankWhenNull="true">
+				<reportElement x="324" y="3" width="28" height="11" uuid="10bb9652-b133-4844-837a-7eab0164be24"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[($V{SUMNONSCAN_1}.doubleValue() /$V{SUMTGTCALL_1}.doubleValue() )*100]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="494" y="3" width="34" height="11" uuid="14cbf382-2f5b-4825-8385-c5f4959f7014"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB5_1}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="293" y="3" width="31" height="11" uuid="730e9595-311e-4cc4-9dc6-ac916e1615f9"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMNONSCAN_1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="352" y="3" width="6" height="11" uuid="bd82c777-ccfb-4717-9426-d2467b3a25a4">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="287" y="3" width="6" height="11" uuid="00fc601d-8ef8-4b40-a81b-d846d991f4ae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="426" y="3" width="34" height="11" uuid="95954567-90f4-4b89-abdd-32608da31bb0"/>
+				<box>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Trebuchet MS" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SUMB3_1}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
